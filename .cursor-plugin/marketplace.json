@@ -1,0 +1,36 @@
+{
+  "name": "layers",
+  "owner": {
+    "name": "Layers",
+    "email": "support@layers.com",
+    "url": "https://growth.layers.com"
+  },
+  "description": "Give your agent marketing superpowers. The Layers growth endpoint, packaged for Cursor.",
+  "plugins": [
+    {
+      "name": "layers",
+      "source": "./plugins/layers",
+      "displayName": "Layers",
+      "version": "2.1.10",
+      "description": "Give your agent marketing superpowers. Layers is the growth endpoint your coding agent calls to run growth for the product it is building: onboarding, the competitive map, what to post, the plan, the persona, the render, TikTok delivery, the review, paid campaigns, Layers-operated accounts, and halt on one call. Install the CLI with `npm install -g @layers/cli` and run `layers setup` in the repository first; the CLI holds the session and binds the project.",
+      "author": {
+        "name": "Layers",
+        "email": "support@layers.com",
+        "url": "https://growth.layers.com"
+      },
+      "homepage": "https://growth.layers.com",
+      "repository": "https://github.com/layers/mcp",
+      "license": "MIT",
+      "keywords": [
+        "layers",
+        "growth",
+        "marketing",
+        "content",
+        "tiktok",
+        "paid-media",
+        "mcp"
+      ],
+      "logo": "./assets/layers-icon-1024-dark.png"
+    }
+  ]
+}

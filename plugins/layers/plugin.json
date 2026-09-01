@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "layers",
+  "version": "2.1.10",
+  "description": "Give your agent marketing superpowers. Layers is the growth endpoint your coding agent calls to run growth for the product it is building: research, personas, video renders, TikTok delivery, paid campaigns, and measurement. Twenty-seven tools, each priced before it runs. Install the CLI with `npm install -g @layers/cli` and run `layers setup` in the repository first.",
+  "author": {
+    "name": "Layers",
+    "email": "support@layers.com",
+    "url": "https://growth.layers.com"
+  },
+  "homepage": "https://growth.layers.com",
+  "repository": "https://github.com/layers/mcp",
+  "license": "MIT",
+  "keywords": [
+    "layers",
+    "growth",
+    "marketing",
+    "content",
+    "tiktok",
+    "paid-media",
+    "mcp"
+  ],
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json",
+  "logo": "./assets/layers-icon-1024-dark.png"
+}
