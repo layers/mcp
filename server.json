@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.layers/mcp",
-  "title": "Layers MCP",
-  "description": "Growth endpoint a coding agent calls to plan, render and deliver content for a product.",
+  "title": "Layers Marketing MCP",
+  "description": "Give your agent marketing superpowers. The endpoint your coding agent calls to run growth for your product: research, personas, video renders, TikTok delivery, paid campaigns, measurement. 27 tools, priced per call.",
   "version": "2.1.12",
   "websiteUrl": "https://growth.layers.com",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "layers",
-  "displayName": "Layers",
+  "displayName": "Layers Marketing MCP",
   "version": "2.1.12",
   "description": "Give your agent marketing superpowers. Layers is the growth endpoint your coding agent calls to run growth for the product it is building: onboarding, the competitive map, what to post, the plan, the persona, the render, TikTok delivery, the review, paid campaigns, Layers-operated accounts, and halt on one call. Install the CLI with `npm install -g @layers/cli` and run `layers setup` in the repository first; the CLI holds the session and binds the project.",
   "author": {

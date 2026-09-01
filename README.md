@@ -1,6 +1,6 @@
-# Layers MCP
+# Layers Marketing MCP
 
-The endpoint a coding agent calls to run growth for a product: onboarding, the competitive map, what to post, the plan, the persona, the render, delivery, the review, paid campaigns, Layers-operated accounts, and halt on one call. Every tool carries its price in credits, and credits come out of your organization's balance when the tool runs.
+Give your agent marketing superpowers. Layers Marketing MCP is the endpoint your coding agent calls to run growth for your product: onboarding, the competitive map, what to post, the plan, the persona, the render, delivery, the review, paid campaigns, Layers-operated accounts, and halt on one call. Every tool carries its price in credits, and credits come out of your organization's balance when the tool runs.
 
 This repository holds the public description of that endpoint and the `server.json` that MCP directories read. The server is a hosted service.
 
