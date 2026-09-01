@@ -3,7 +3,7 @@
   "name": "io.github.layers/mcp",
   "title": "Layers MCP",
   "description": "Growth endpoint a coding agent calls to plan, render and deliver content for a product.",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "websiteUrl": "https://growth.layers.com",
   "repository": {
     "url": "https://github.com/layers/mcp",
@@ -29,7 +29,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "@layers/cli",
-      "version": "2.1.11",
+      "version": "2.1.12",
       "transport": {
         "type": "stdio"
       },
