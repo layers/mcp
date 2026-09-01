@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.layers/mcp",
+  "title": "Layers MCP",
+  "description": "Growth endpoint a coding agent calls to plan, render and deliver content for a product.",
+  "version": "2.1.10",
+  "websiteUrl": "https://growth.layers.com",
+  "repository": {
+    "url": "https://github.com/layers/mcp",
+    "source": "github",
+    "id": "1353982454"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.layers.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <session>. Run `layers setup` (or `layers login`) from the repository to issue one; the CLI stores it in the OS credential store.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@layers/cli",
+      "version": "2.1.10",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp",
+          "valueHint": "command",
+          "description": "Runs the Layers CLI as the stdio bridge to https://mcp.layers.com/mcp, forwarding every JSON-RPC message with the stored session."
+        }
+      ]
+    }
+  ]
+}
