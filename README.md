@@ -32,6 +32,29 @@ Files it writes, all safe to commit:
 | `.agents/skills/layers/SKILL.md` | thin pointer to the server-owned skill index |
 | `.claude/skills/layers` | relative symlink to the canonical skill |
 
+## Install as a Claude Code plugin
+
+```text
+/plugin marketplace add layers/mcp
+/plugin install layers@layers
+```
+
+The plugin carries the `layers` MCP entry, the Layers skill, and three
+commands. `/layers:setup` walks the setup above. `/layers:post` takes one
+opportunity through plan, render and delivery as a draft, quoting the cost
+before every charged call. `/layers:status` reads `layers://account`,
+`layers://workspace` and `layers://jobs` and summarizes them.
+
+The plugin configures the client. The CLI holds the session and
+`.layers/project.json` binds the project, so install `@layers/cli` and run
+`layers setup` in the repository as well. In a repository that has both, Claude
+Code lists the plugin's entry as `plugin:layers:layers` and the one `layers
+setup` wrote as `layers`. They reach the same server, and one of them is
+enough.
+
+Codex and Cursor read the same `.mcp.json` entry and the same skill that
+`layers setup` writes, so there is no separate plugin for them.
+
 ## Connect
 
 - **Endpoint:** `https://mcp.layers.com/mcp`

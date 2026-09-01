@@ -1,0 +1,36 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "layers",
+  "owner": {
+    "name": "Layers",
+    "email": "support@layers.com",
+    "url": "https://growth.layers.com"
+  },
+  "description": "The Layers growth endpoint, packaged for Claude Code.",
+  "plugins": [
+    {
+      "name": "layers",
+      "source": "./plugins/layers",
+      "displayName": "Layers",
+      "version": "2.1.10",
+      "description": "The growth endpoint a coding agent calls to run growth for a product: onboarding, the competitive map, what to post, the plan, the persona, the render, delivery, the review, paid campaigns, Layers-operated accounts, and halt on one call. Install the CLI with `npm install -g @layers/cli` and run `layers setup` in the repository first; the CLI holds the session and binds the project.",
+      "author": {
+        "name": "Layers",
+        "email": "support@layers.com",
+        "url": "https://growth.layers.com"
+      },
+      "homepage": "https://growth.layers.com",
+      "repository": "https://github.com/layers/mcp",
+      "license": "MIT",
+      "keywords": [
+        "layers",
+        "growth",
+        "content",
+        "tiktok",
+        "paid-media",
+        "marketing"
+      ],
+      "category": "productivity"
+    }
+  ]
+}
