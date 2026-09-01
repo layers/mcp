@@ -1,0 +1,54 @@
+name: Publish to MCP Registry
+
+# Publishes server.json to the official MCP registry at
+# https://registry.modelcontextprotocol.io.
+#
+# No human login and no stored token. The job proves who it is with the
+# OIDC token GitHub Actions mints for this workflow run. The registry reads
+# the token's repository_owner claim, which is "layers" for this repository,
+# and grants publish rights on the io.github.layers/* namespace.
+
+on:
+  # Publish whenever the server manifest changes on the default branch.
+  push:
+    branches: [main]
+    paths:
+      - server.json
+  # Allow a manual run from the Actions tab.
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      # Required: lets the job request an OIDC token. Without it the publisher
+      # cannot authenticate and the login step fails.
+      id-token: write
+      # Read-only checkout is all this job needs.
+      contents: read
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v5
+
+      - name: Install mcp-publisher
+        env:
+          # Pinned so an upstream release never changes this job under us.
+          # Bump deliberately after checking the registry release notes.
+          MCP_PUBLISHER_VERSION: v1.8.1
+        run: |
+          set -euo pipefail
+          # GitHub-hosted ubuntu-latest runners are linux/amd64.
+          curl -fsSL \
+            "https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}/mcp-publisher_linux_amd64.tar.gz" \
+            | tar xz mcp-publisher
+          chmod +x mcp-publisher
+
+      - name: Log in to the registry with this run's OIDC token
+        run: ./mcp-publisher login github-oidc
+
+      - name: Check server.json before publishing
+        run: ./mcp-publisher validate server.json
+
+      - name: Publish server.json
+        run: ./mcp-publisher publish
