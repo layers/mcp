@@ -1,10 +1,3 @@
-Scope of this license
-
-This license covers the contents of this repository: the documentation, the
-README and the server.json metadata. The Layers MCP server is a hosted service
-at https://mcp.layers.com/mcp and its source is not distributed here. Use of
-that service is governed by the Layers terms at https://layers.com.
-
 MIT License
 
 Copyright (c) 2026 Layers
