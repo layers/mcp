@@ -12,7 +12,7 @@
       "name": "layers",
       "source": "./plugins/layers",
       "displayName": "Layers Marketing MCP",
-      "version": "2.1.13",
+      "version": "2.1.14",
       "description": "The growth endpoint a coding agent calls to run growth for a product: onboarding, the competitive map, what to post, the plan, the persona, the render, delivery, the review, paid campaigns, Layers-operated accounts, and halt on one call. Install the CLI with `npm install -g @layers/cli` and run `layers setup` in the repository first; the CLI holds the session and binds the project.",
       "author": {
         "name": "Layers",
